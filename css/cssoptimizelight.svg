@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.0" width="100%" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="myRadialGradient1"
+                    cx="50%" cy="50%"
+                    spreadMethod="pad">
+      <stop offset="0%"   stop-color="#fff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%"
+     style="fill:url(#myRadialGradient1);" />
+</svg>

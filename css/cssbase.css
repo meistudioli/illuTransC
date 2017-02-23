@@ -1,0 +1,13 @@
+/*base on YUI 3.10.3 reset & fonts*/
+html{background:#fff;color:#000}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,main{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0;font:100%;font-size:inherit}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;-webkit-text-size-adjust:none}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif}pre,code,kbd,samp,tt{font-family:monospace;line-height:100%;*font-size:108%}
+
+.mei-g{letter-spacing:-0.31em;*letter-spacing:normal;*word-spacing:-0.43em;text-rendering:optimizespeed;padding:0px;margin:0px;}
+.mei-g .mei-u,.mei-b{display:inline-block;word-spacing:normal;letter-spacing:normal;vertical-align:top;zoom:1;*display:inline;text-rendering:auto;}
+
+.irwrap{position:relative;padding-bottom:100%;}/*intrinsic ratio*/
+.irwrap .irens{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+.hyphenate{-ms-word-break:break-all;word-break:break-all;word-break:break-word;*word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
+
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
