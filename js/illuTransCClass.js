@@ -644,7 +644,6 @@ illuTransC.prototype = {
 		}//end if
 		if (typeof target.isReady != 'undefined') return;
 
-		// mid = 'M' + getRand(1, 10000) + '-' + getRand(1, 10000);
 		mid = 'M' + getRand(1, 10000) + getRand(1, 10000);
 		target.mid = mid;
 		conf = JSON.parse(JSON.stringify(illuTransC.prototype.default));
@@ -826,7 +825,6 @@ illuTransC.prototype = {
 			function(host) {
 				if (!host.classList.contains('active')) return;
 				this.resetUnit(host);
-				// host.querySelector('.delete').click();
 			}
 		, ins);
 	},
@@ -1007,19 +1005,11 @@ illuTransC.prototype = {
 						}//end if
 
 						this.executeCallBack('view', JSON.parse(JSON.stringify(this.Data.listData[obj.id])));
-
-						// if (!this.Ens.callBacks || !this.Ens.callBacks.length)  {
-						// 	this.lightBox.classList.add('act');
-						// 	this.lightBoxImg.src = this.Data.listData[obj.id].preview;
-						// } else {
-						// 	this.executeCallBack('view', JSON.parse(JSON.stringify(this.Data.listData[obj.id])));
-						// }//end if
 						break;
 				}//end switch
 				this.i13n('illuTransCAct', info);//i13n
 				break;
 			case 'change':
-				// if (this.type == 'basic') this.fHandler([{name:obj.t.value}]);
 				if (this.type == 'basic') this.fHandler([obj.t.value]);
 				else {
 					this.fHandler(obj.t.files);
@@ -1195,10 +1185,9 @@ illuTransC.prototype = {
 				}
 			, this);
 			if (this.Ens.queue.length != files.length) {
-				// err = (!files.length) ? 'empty' : (!this.Ens.queue.length) ? 'formatAndEmpty' : 'format';
 				if (!this.Ens.queue.length) err = 'empty';
 				else if (this.Ens.queue.length != files.length) {
-					this.executeCallBack('format',
+					this.executeCallBack('formatError',
 						{
 							originalAmount: files.length,
 							acceptAmount: this.Ens.queue.length 
@@ -1209,7 +1198,6 @@ illuTransC.prototype = {
 				this.executeCallBack('exceed',
 					{
 						originalAmount: this.Ens.queue.length,
-						// exceedAmount: this.Ens.queue.length - (this.Data.max - this.Data.actAmt),
 						acceptAmount: this.Data.max - this.Data.actAmt
 					}
 				);
@@ -1235,7 +1223,7 @@ illuTransC.prototype = {
 		if (!this.Ens.callBacks.length) return;
 
 		//action:
-		//view, sorting, exceed, blockByUploading, blockByFull, empty, formatAndEmpty, format, pick, upload, uploadFail, uploadSuccess, delete, drop
+		//view, sorting, exceed, blockByUploading, blockByFull, empty, formatError, pick, upload, uploadFail, uploadSuccess, delete, drop
 		
 		args = [].slice.call(arguments);
 		args.push(this.Ens.host);//put host in the end
@@ -1665,7 +1653,6 @@ illuTransC.prototype = {
 		
 		//error
 		if (this.Ens.main.querySelectorAll('.fail').length) {
-			this.executeCallBack('uploadFail');
 			this.Ens.host.classList.add('mod-upload-fail');
 
 			ins = this;
